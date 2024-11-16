@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "tredi-model-backend"
+version = "0.1.0"
+description = "Hanghae AI Hackaton Tredi AI Backend"
+authors = ["changhwanK <devchanghwan@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.115.5"
+uvicorn = "^0.32.0"
+pydantic = "^2.9.2"
+sqlalchemy = ">=1.4,<2.0.36"
+mysqlclient = "^2.2.6"
+pymysql = "^1.1.1"
+requests = "^2.32.3"
+python-dotenv = "^1.0.1"
+numpy = ">=1.26.0"
+transformers = "^4.46.2"
+pandas = "^2.2.3"
+langchain-openai = "^0.2.8"
+langchain-text-splitters = "^0.3.2"
+langchain-community = "^0.3.7"
+langchain-chroma = "^0.1.4"
+datasets = "^3.1.0"
+langchain = "^0.3.7"
+chromadb = "^0.5.18"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "uvicorn ./src/main:app --reload"
+
